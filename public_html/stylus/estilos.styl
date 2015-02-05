@@ -1,7 +1,9 @@
 @import "normalize.styl"
+@import "fonts.styl"
 
 gris_oscuro = #333333
 gris_claro = #818181
+rojo = red
 
 
 .border-bottom
@@ -17,6 +19,7 @@ a
   top 50%
   margin-top -10px
   left .5em
+  color gray
 
 body
   font-size 16px
@@ -24,6 +27,9 @@ body
 
 figure 
   margin 0
+
+img
+  vertical-align top
   
 .song
   width 128px
@@ -61,5 +67,85 @@ figure
     font-size 1.1em
     text-align center
     line-height 3.5em
+
+.playing
+    &.small
+        width 20em
+  
+.center-block
+    margin 0 auto
+    
+.center-text
+    text-align center
+    
+.right-text
+    text-align right
+    
+
+.relative 
+  position relative
+  
+.actions
+   position absolute
+   bottom 0
+   right 0
+   left 0
+   background-color rgba(0,0,0,.3)
+   
+   
+.action
+    color white
+    margin-right .5em
+    font-size: 1.2em
+    &:last-child
+      margin-right 0
+    
+.padding
+  padding 1em
   
 
+.progress
+  margin-top 1em 0;
+  position relative
+  
+
+  .min
+    font-size .8em
+    position absolute
+    left 0
+    top -6px
+    
+  .max
+    font-size .8em
+    position absolute
+    right 0
+    top -6px
+
+  .total  
+      height 5px
+      background gris_claro
+      border-radius 5px
+      margin 0 auto
+      width 75%
+      
+      
+      
+      
+      
+  .state
+      height 5px;
+      width 30%
+      background red
+      border-radius 5px
+      position relative
+  .circle
+      width 10px
+      height 10px
+      background gris_oscuro
+      border-radius 50%
+      position absolute
+      right 0
+      top -3px
+
+.inline-block
+  display inline-block
