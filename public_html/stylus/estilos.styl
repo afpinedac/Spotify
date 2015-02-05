@@ -6,20 +6,10 @@ gris_claro = #818181
 rojo = red
 
 
-.border-bottom
-  border-bottom 1px solid gris_claro
 
 a
   text-decoration none
 
-//buttons
-
-.button-menu
-  position absolute
-  top 50%
-  margin-top -10px
-  left .5em
-  color gray
 
 body
   font-size 16px
@@ -31,17 +21,7 @@ figure
 img
   vertical-align top
   
-.song
-  width 128px
-  display inline-block
-  font-size 1rem
-  margin-right 1em
-  margin-bottom 1em
-  text-align left
-  p 
-    margin .5em 0
-  &:nth-child(even)
-    margin-right 0
+
 
 .container
   font-size 0px
@@ -49,14 +29,31 @@ img
   text-align center
 
 
+
+.border-bottom
+  border-bottom 1px solid gris_claro
+
+
+//buttons
+
+.button-menu
+  position absolute
+  top 50%
+  margin-top -10px
+  left .5em
+  color gray
+
+
 .name
   color gris_oscuro
-
 
 .author
   color gris_claro
 
 
+.padding-tb
+  padding 1em 0
+  
 .menu
   display none
 
@@ -69,6 +66,7 @@ img
     line-height 3.5em
 
 .playing
+    
     &.small
         width 20em
   
@@ -99,6 +97,21 @@ img
     font-size: 1.2em
     &:last-child
       margin-right 0
+    &.gray
+        color gris_oscuro
+
+
+.song
+  width 128px
+  display inline-block
+  font-size 1rem
+  margin-right 1em
+  margin-bottom 1em
+  text-align left
+  p 
+    margin .5em 0
+  &:nth-child(even)
+    margin-right 0    
     
 .padding
   padding 1em
@@ -108,18 +121,20 @@ img
   margin-top 1em 0;
   position relative
   
-
-  .min
-    font-size .8em
-    position absolute
-    left 0
-    top -6px
     
+  .min
   .max
     font-size .8em
     position absolute
-    right 0
     top -6px
+    right 0
+    
+  .min
+    left 0
+  .max
+    right 0
+    
+    
 
   .total  
       height 5px
@@ -127,9 +142,6 @@ img
       border-radius 5px
       margin 0 auto
       width 75%
-      
-      
-      
       
       
   .state
@@ -149,3 +161,19 @@ img
 
 .inline-block
   display inline-block
+  
+
+  /* mi primer media query :) */
+    
+@media screen and (min-width 480px)
+ 
+  .song
+      &:nth-child(even)
+          margin-right 1em  
+
+  .playing
+      .medium
+          width auto
+          
+
+    
